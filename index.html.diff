@@ -1,0 +1,11 @@
+diff --git a/index.html b/index.html
+index 64cfe82..ad4e3d8 100644
+--- a/index.html
++++ b/index.html
+@@ -88,4 +88,6 @@ document.querySelectorAll('.service-select').forEach(function(btn){function acti
+ var sectionLinks=[].slice.call(document.querySelectorAll('.section-link'));var sections=sectionLinks.map(function(a){return document.getElementById(a.dataset.section)}).filter(Boolean);if('IntersectionObserver'in window){var navObserver=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){sectionLinks.forEach(function(a){a.classList.toggle('active',a.dataset.section===e.target.id)})}})},{rootMargin:'-35% 0px -55% 0px',threshold:0});sections.forEach(function(s){navObserver.observe(s)})}
+ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('js');var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});document.querySelectorAll('.reveal').forEach(function(i){io.observe(i)})}}catch(e){document.documentElement.classList.remove('js')}
+ </script>
++<script src="assets/chat-widget.config.js"></script>
++<script src="assets/chat-widget.js"></script>
+ </body></html>
